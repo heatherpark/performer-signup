@@ -22,6 +22,7 @@
   font-size: var(--primary-font-global-size);
   color: var(--font-color);
   padding: 3% 0;
+  letter-spacing: var(--secondary-font-letter-spacing);
 }
 
 .form-field input::placeholder {
@@ -35,4 +36,11 @@
   font-size: 0.65rem;
   width: 83%;
   margin: 1% auto;
+  letter-spacing: var(--secondary-font-letter-spacing);
+}
+
+.form-field--invalid input {
+  background-color: #ec3979;
+  border-radius: 4px 4px 0 0;
+  padding-left: 3.5%;
 }
