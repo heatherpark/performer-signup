@@ -62,7 +62,8 @@
   padding: 30px 0;
 }
 
-.fa-check-circle {
+.fa-check-circle,
+.fa-times-circle {
   font-size: 1.4rem;
   width: 83%;
   margin: 1% auto;

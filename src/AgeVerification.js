@@ -23,10 +23,18 @@ class AgeVerification extends Component {
           </div>
         </div>
         <div className="validation-icon-container">
-          <i className="far fa-check-circle"></i>
+          {touched ? validationIcon(valid) : null}
         </div>
       </div>
     );
+
+    function validationIcon(valid) {
+      if (valid) {
+        return <i className="far fa-check-circle"></i>
+      }
+
+      return <i className="far fa-times-circle"></i>
+    }
   }
 
   render() {
