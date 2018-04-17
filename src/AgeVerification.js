@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-
-const required = value => value ? undefined : 'Required';
+import { required, alphanumeric } from './forms/validation';
 
 class AgeVerification extends Component {
   renderField(field) {
@@ -25,7 +24,7 @@ class AgeVerification extends Component {
       <form>
         <Field
           name="username"
-          validate={required}
+          validate={[required, alphanumeric]}
           component={this.renderField} />
       </form>
     );
