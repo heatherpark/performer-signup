@@ -5,7 +5,7 @@ import { required, alphanumeric } from './forms/validation';
 class AgeVerification extends Component {
   renderField(field) {
     const { meta: { touched, error } } = field;
-    const className = touched && error ? 'invalid-field' : '';
+    const className = `form-field ${touched && error ? 'form-field--invalid' : ''}`;
 
     return (
       <div className={className}>
