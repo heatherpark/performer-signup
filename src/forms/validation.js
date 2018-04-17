@@ -4,10 +4,9 @@ export const alphanumeric = value => (
   : undefined
 );
 
-// export const minLength = min => value => (
-//   value && value.length < min ?
-//     `Minimum ${min} characters` : undefined
-// );
+export const emailMatch = (value, field, fields) => {
+  return value !== fields.email1 ? 'Email address doesn\'t match' : undefined;
+};
 
 export const minLength = min => value => (
   value && value.length < min ?
