@@ -6,7 +6,6 @@
 }
 
 .message {
-  font-family: var(--primary-font);
   border: solid 0.5px #FFF;
   border-radius: 3.5px;
   padding: 1.3em 1.25em;
@@ -73,4 +72,28 @@
   background-color: #ec3979;
   border-radius: 4px 4px 0 0;
   padding-left: 1%;
+}
+
+.image-upload {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 5%;
+  margin-top: 10%;
+}
+
+.image-upload .image {
+  height: 210px;
+  background-color: #FFF;
+  border-radius: 7px;
+}
+
+.image-drop {
+  text-align: center;
+  border: 1px solid #FFF;
+  border-radius: 7px;
+  font-family: var(--secondary-font);
+  font-size: var(--primary-font-global-size);
+  padding: 16% 16%;
+  margin-top: 5%;
+  line-height: 1.1rem;
 }

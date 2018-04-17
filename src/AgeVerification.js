@@ -81,6 +81,22 @@ class AgeVerification extends Component {
             placeholder="Confirm Email Address"
             validate={[required, emailMatch]}
             component={this.renderField} />
+          <div className="image-upload">
+            <div>
+              <h2>Your ID</h2>
+              <div className="image"></div>
+              <div className="image-drop">
+                Drop image of ID front here
+              </div>
+            </div>
+            <div>
+              <h2>Selfie + ID</h2>
+              <div className="image"></div>
+              <div className="image-drop">
+                Drop image of you and ID here
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     );
