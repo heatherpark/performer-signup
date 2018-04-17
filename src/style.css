@@ -4,8 +4,20 @@
 }
 
 @font-face {
-  font-family: CatographMonoCF;
+  font-family: CartographMonoCF;
   src: url("resources/fonts/CartographMonoCF-Regular.otf");
+}
+
+:root {
+  --primary-font: GTHaptik;
+  --secondary-font: CartographMonoCF;
+  --primary-font-global-size: 0.75rem;
+  --font-color: #FFF;
+}
+
+html {
+  letter-spacing: 0.04rem;
+  line-height: 1.45rem;
 }
 
 body {
@@ -13,10 +25,7 @@ body {
   color: #FFF;
 }
 
-.primary-font {
-  font-family: GTHaptik;
-}
-
-.secondary-font {
-  font-family: CartographMonoCF;
+h2 {
+  font-size: 1.1rem;
+  font-weight: 500;
 }

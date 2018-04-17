@@ -1,3 +1,4 @@
+import './AgeVerification.css';
 import React, { Component } from 'react';
 import { reduxForm, Field, formValueSelector } from 'redux-form';
 import { connect } from'react-redux';
@@ -25,11 +26,11 @@ class AgeVerification extends Component {
 
   render() {
     return (
-      <div>
-        <p className="message primary-font">
+      <div className="age-verification">
+        <h2 className="message primary-font">
           All entered information is hidden from users. 
           This is for age verification purposes only.
-        </p>
+        </h2>
         <form>
           <Field
             name="username"

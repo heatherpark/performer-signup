@@ -1,0 +1,38 @@
+.age-verification {
+  width: 38%;
+  margin: 0 auto;
+}
+
+.message {
+  font-family: var(--primary-font);
+  border: solid 0.5px #FFF;
+  border-radius: 3.5px;
+  padding: 1.3em 1.25em;
+}
+
+.form-field input,
+.form-field input:focus {
+  border: none;
+  border-bottom: #FFF solid 1.5px;;
+  background: none;
+  outline: 0;
+  width: 90%;
+  display: block;
+  margin: 4% auto 0;
+  font-size: var(--primary-font-global-size);
+  color: var(--font-color);
+  padding: 3% 0;
+}
+
+.form-field input::placeholder {
+  font-family: var(--secondary-font);
+  color: var(--font-color);
+  font-weight: normal;
+}
+
+.error-text {
+  font-family: var(--secondary-font);  
+  font-size: 0.65rem;
+  width: 83%;
+  margin: 1% auto;
+}
