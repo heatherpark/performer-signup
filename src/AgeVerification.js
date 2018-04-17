@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { reduxForm, Field } from 'redux-form';
 
 class AgeVerification extends Component {
   render() {
     return (
-      <div></div>
+      <form></form>
     );
   }
 }
 
-export default AgeVerification;
+export default reduxForm({
+  form: 'AgeVerificationForm'
+})(AgeVerification);
