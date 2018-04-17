@@ -1,3 +1,13 @@
+export const age = minAge => value => {
+  const birthdate = new Date(value);
+  const now = new Date();
+  var diff = now - birthdate;
+  var age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+
+  return age < minAge ? 
+    'You are under 21, please go back to school' : undefined;
+}
+
 export const alphanumeric = value => (
   value && /[^a-zA-Z0-9 ]/i.test(value)
   ? 'Invalid character has been detected'
