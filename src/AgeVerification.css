@@ -97,3 +97,14 @@
   margin-top: 5%;
   line-height: 1.1rem;
 }
+
+.agreement__checkbox {
+  text-align: center;
+  font-family: var(--primary-font);
+  margin: 15% 0;
+  font-size: 0.9rem;
+}
+
+.agreement__checkbox label {
+  margin-left: 10px;
+}

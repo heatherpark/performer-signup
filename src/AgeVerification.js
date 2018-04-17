@@ -5,6 +5,16 @@ import { connect } from'react-redux';
 import { required, alphanumeric, minLength, emailMatch, age } from './forms/validation';
 
 class AgeVerification extends Component {
+  renderCheckboxField(field) {
+    console.log(field);
+    return (
+      <div className="agreement__checkbox">
+        <input type="checkbox" />
+        <label>{field.label}</label>
+      </div>
+    )
+  }
+
   renderField(field) {
     const { meta: { touched, error, valid } } = field;
     const validClass = touched && valid ? 'form-field--valid' : '';
@@ -97,6 +107,12 @@ class AgeVerification extends Component {
               </div>
             </div>
           </div>
+          <Field
+            name="agreement"
+            type="checkbox"
+            label="I have read and agree to the terms and conditions."
+            validate={[required]}
+            component={this.renderCheckboxField} />
         </form>
       </div>
     );
