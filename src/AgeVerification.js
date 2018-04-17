@@ -6,8 +6,8 @@ import { required, alphanumeric, minLength, emailMatch, age } from './forms/vali
 class AgeVerification extends Component {
   renderField(field) {
     const { meta: { touched, error, valid } } = field;
-    const errorClass = touched && error ? 'form-field--invalid' : '';
     const validClass = touched && valid ? 'form-field--valid' : '';
+    const errorClass = touched && error ? 'form-field--invalid' : '';
     const className = `form-field ${errorClass} ${validClass}`;
     
     return (
@@ -25,38 +25,44 @@ class AgeVerification extends Component {
 
   render() {
     return (
-      <form>
-        <Field
-          name="username"
-          type="text"
-          placeholder="Username"
-          validate={[required, alphanumeric]}
-          component={this.renderField} />
-        <Field
-          name="password"
-          type="password"
-          placeholder="Password"
-          validate={[required, minLength(8)]}
-          component={this.renderField} />
-        <Field
-          name="dob"
-          type="date" 
-          placeholder="Birthday"
-          validate={[required, age(21)]}
-          component={this.renderField} />
-        <Field
-          name="email1"
-          type="email"
-          placeholder="Email Address"
-          validate={required}
-          component={this.renderField} />
-        <Field
-          name="email2"
-          type="email"
-          placeholder="Confirm Email Address"
-          validate={[required, emailMatch]}
-          component={this.renderField} />
-      </form>
+      <div>
+        <p className="message">
+          All entered information is hidden from users. 
+          This is for age verification purposes only.
+        </p>
+        <form>
+          <Field
+            name="username"
+            type="text"
+            placeholder="Username"
+            validate={[required, alphanumeric]}
+            component={this.renderField} />
+          <Field
+            name="password"
+            type="password"
+            placeholder="Password"
+            validate={[required, minLength(8)]}
+            component={this.renderField} />
+          <Field
+            name="dob"
+            type="date" 
+            placeholder="Birthday"
+            validate={[required, age(21)]}
+            component={this.renderField} />
+          <Field
+            name="email1"
+            type="email"
+            placeholder="Email Address"
+            validate={required}
+            component={this.renderField} />
+          <Field
+            name="email2"
+            type="email"
+            placeholder="Confirm Email Address"
+            validate={[required, emailMatch]}
+            component={this.renderField} />
+        </form>
+      </div>
     );
   }
 }
