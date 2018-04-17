@@ -14,14 +14,13 @@
 
 :root {
   --primary-font: GTHaptik;
-  --primary-font-letter-spacing: 0.04rem;
   --secondary-font: CartographMonoCF;
-  --secondary-font-letter-spacing: 0.05rem;
   --primary-font-global-size: 0.75rem;
   --font-color: #FFF;
 }
 
 html {
+  letter-spacing: 0.05rem;
   line-height: 1.45rem;
 }
 

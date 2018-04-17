@@ -51,6 +51,12 @@ class AgeVerification extends Component {
             validate={[required, age(21)]}
             component={this.renderField} />
           <Field
+            name="gender"
+            type="text" 
+            placeholder="Gender"
+            validate={[required]}
+            component={this.renderField} />
+          <Field
             name="email1"
             type="email"
             placeholder="Email Address"

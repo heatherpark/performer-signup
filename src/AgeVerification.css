@@ -44,3 +44,8 @@
   border-radius: 4px 4px 0 0;
   padding-left: 3.5%;
 }
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease; 
+  opacity: 0;
+}
