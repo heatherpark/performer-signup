@@ -23,7 +23,7 @@ class AgeVerification extends Component {
           </div>
         </div>
         <div className="validation-icon-container">
-          <i class="far fa-check-circle"></i>
+          <i className="far fa-check-circle"></i>
         </div>
       </div>
     );
