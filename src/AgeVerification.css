@@ -1,6 +1,8 @@
 .age-verification {
   width: 38%;
-  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .message {
@@ -10,15 +12,24 @@
   padding: 1.3em 1.25em;
 }
 
+.form-field {
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+
+.input-error-container {
+  padding-left: 5%;
+}
+
 .form-field input,
 .form-field input:focus {
   border: none;
   border-bottom: #FFF solid 1.5px;;
   background: none;
   outline: 0;
-  width: 90%;
+  width: 98%;
   display: block;
-  margin: 4% auto 0;
+  margin-top: 4%;
   font-size: var(--primary-font-global-size);
   color: var(--font-color);
   padding: 3% 0;
@@ -34,8 +45,7 @@
 .error-text {
   font-family: var(--secondary-font);  
   font-size: 0.65rem;
-  width: 83%;
-  margin: 1% auto;
+  padding-left: 4%;
   letter-spacing: var(--secondary-font-letter-spacing);
 }
 
@@ -48,4 +58,12 @@
 [placeholder]:focus::-webkit-input-placeholder {
   transition: opacity 0.5s 0.5s ease; 
   opacity: 0;
+}
+
+.validation-icon-container {
+  padding: 30px 0;
+}
+
+.fa-check-circle {
+  font-size: 1.4rem;
 }

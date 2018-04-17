@@ -13,12 +13,17 @@ class AgeVerification extends Component {
     
     return (
       <div className={className}>
-        <input
-          type={field.type}
-          placeholder={field.placeholder}
-          {...field.input} />
-        <div className="error-text">
-          {touched ? error : ''}
+        <div className="input-error-container">
+          <input
+            type={field.type}
+            placeholder={field.placeholder}
+            {...field.input} />
+          <div className="error-text">
+            {touched ? error : ''}
+          </div>
+        </div>
+        <div className="validation-icon-container">
+          <i class="far fa-check-circle"></i>
         </div>
       </div>
     );
