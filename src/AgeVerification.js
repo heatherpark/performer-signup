@@ -5,9 +5,11 @@ import { required, alphanumeric, minLength, emailMatch, age } from './forms/vali
 
 class AgeVerification extends Component {
   renderField(field) {
-    const { meta: { touched, error } } = field;
-    const className = `form-field ${touched && error ? 'form-field--invalid' : ''}`;
-
+    const { meta: { touched, error, valid } } = field;
+    const errorClass = touched && error ? 'form-field--invalid' : '';
+    const validClass = touched && valid ? 'form-field--valid' : '';
+    const className = `form-field ${errorClass} ${validClass}`;
+    
     return (
       <div className={className}>
         <input
