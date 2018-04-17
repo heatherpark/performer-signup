@@ -1,3 +1,22 @@
+@font-face {
+  font-family: GTHaptik;
+  src: url("resources/fonts/GT-Haptik-Regular.ttf");
+}
+
+@font-face {
+  font-family: CatographMonoCF;
+  src: url("resources/fonts/CartographMonoCF-Regular.otf");
+}
+
 body {
   background-color: #ff3b81;
+  color: #FFF;
+}
+
+.primary-font {
+  font-family: GTHaptik;
+}
+
+.secondary-font {
+  font-family: CartographMonoCF;
 }

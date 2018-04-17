@@ -26,7 +26,7 @@ class AgeVerification extends Component {
   render() {
     return (
       <div>
-        <p className="message">
+        <p className="message primary-font">
           All entered information is hidden from users. 
           This is for age verification purposes only.
         </p>
