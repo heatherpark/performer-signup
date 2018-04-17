@@ -33,7 +33,6 @@
   font-size: var(--primary-font-global-size);
   color: var(--font-color);
   padding: 3% 0;
-  letter-spacing: var(--secondary-font-letter-spacing);
 }
 
 .form-field input::placeholder {
@@ -46,7 +45,6 @@
   font-family: var(--secondary-font);  
   font-size: 0.65rem;
   padding-left: 4%;
-  letter-spacing: var(--secondary-font-letter-spacing);
 }
 
 .form-field--invalid input {
@@ -66,4 +64,12 @@
 
 .fa-check-circle {
   font-size: 1.4rem;
+  width: 83%;
+  margin: 1% auto;
+}
+
+.form-field--invalid input {
+  background-color: #ec3979;
+  border-radius: 4px 4px 0 0;
+  padding-left: 1%;
 }
