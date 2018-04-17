@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { required, alphanumeric } from './forms/validation';
+import { required, alphanumeric, minLength } from './forms/validation';
 
 class AgeVerification extends Component {
   renderField(field) {
@@ -10,7 +10,7 @@ class AgeVerification extends Component {
     return (
       <div className={className}>
         <input
-          type="text"
+          type={field.type}
           {...field.input} />
         <div className="error-text">
           {touched ? error : ''}
@@ -24,7 +24,23 @@ class AgeVerification extends Component {
       <form>
         <Field
           name="username"
+          type="text"
           validate={[required, alphanumeric]}
+          component={this.renderField} />
+        <Field
+          name="password"
+          type="password"
+          validate={[required, minLength(8)]}
+          component={this.renderField} />
+        <Field
+          name="email1"
+          type="email"
+          validate={[required, minLength(8)]}
+          component={this.renderField} />
+        <Field
+          name="email2"
+          type="email"
+          validate={[required, minLength(8)]}
           component={this.renderField} />
       </form>
     );
@@ -32,5 +48,5 @@ class AgeVerification extends Component {
 }
 
 export default reduxForm({
-  form: 'AgeVerificationForm'
+  form: 'ageVerificationForm'
 })(AgeVerification);
