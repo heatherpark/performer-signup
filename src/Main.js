@@ -1,10 +1,14 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
 import AgeVerification from './AgeVerification';
+import SignupFooter from './SignupFooter';
 
 const Main = (props) => {
   return (
-    <AgeVerification />
+    <div>
+      <AgeVerification />
+      <SignupFooter canMoveForward={props.valid} />
+    </div>
   );
 };
 
