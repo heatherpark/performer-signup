@@ -8,6 +8,10 @@
   src: url("resources/fonts/CartographMonoCF-Regular.otf");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --primary-font: GTHaptik;
   --secondary-font: CartographMonoCF;
