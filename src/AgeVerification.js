@@ -14,6 +14,7 @@ class AgeVerification extends Component {
       <div className={className}>
         <input
           type={field.type}
+          placeholder={field.placeholder}
           {...field.input} />
         <div className="error-text">
           {touched ? error : ''}
@@ -28,26 +29,31 @@ class AgeVerification extends Component {
         <Field
           name="username"
           type="text"
+          placeholder="Username"
           validate={[required, alphanumeric]}
           component={this.renderField} />
         <Field
           name="password"
           type="password"
+          placeholder="Password"
           validate={[required, minLength(8)]}
           component={this.renderField} />
         <Field
           name="dob"
           type="date" 
+          placeholder="Birthday"
           validate={[required, age(21)]}
           component={this.renderField} />
         <Field
           name="email1"
           type="email"
+          placeholder="Email Address"
           validate={required}
           component={this.renderField} />
         <Field
           name="email2"
           type="email"
+          placeholder="Confirm Email Address"
           validate={[required, emailMatch]}
           component={this.renderField} />
       </form>
