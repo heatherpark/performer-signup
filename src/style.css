@@ -23,7 +23,7 @@ body {
   background-color: var(--background-color);
   color: #FFF;
   font-size: 100%;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.05rem;
 }
 
 input,
