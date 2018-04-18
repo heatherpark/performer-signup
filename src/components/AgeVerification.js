@@ -1,12 +1,11 @@
 import './AgeVerification.css';
 import React, { Component } from 'react';
-import { reduxForm, Field, formValueSelector } from 'redux-form';
-import { connect } from'react-redux';
+import { reduxForm, Field } from 'redux-form';
 import { required, alphanumeric, minLength, emailMatch, age } from '../forms/validation';
 
 class AgeVerification extends Component {
   renderCheckboxField(field) {
-    const { input, meta: { touched, error } } = field;
+    const { input } = field;
     return (
       <div className="terms-conditions">
         <input 
