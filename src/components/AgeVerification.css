@@ -174,3 +174,26 @@ input[type=checkbox]:checked + label:before {
   color: #ff3b81;
   text-align: center;
 }
+
+/** media queries
+ ---------------------------------------------------------*/
+
+@media all and (max-width: 665px) {
+  .age-verification {
+    width: 90%;
+  }
+
+  .image-upload {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 0 5%;
+    margin-top: 10%;
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (min-width: 665px) and (max-width: 980px) {
+  .age-verification {
+    width: 50%;
+  }
+}

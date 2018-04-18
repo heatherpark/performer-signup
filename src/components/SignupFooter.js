@@ -2,7 +2,6 @@ import React from 'react';
 import './SignupFooter.css';
 
 const SignupFooter = (props) => {
-  console.log(props);
   return (
     <div className="signup-footer">
       <button className="backward">
