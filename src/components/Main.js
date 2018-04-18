@@ -1,7 +1,7 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
-import AgeVerification from './AgeVerification';
-import SignupFooter from './SignupFooter';
+import { AgeVerification } from '../components';
+import { SignupFooter } from '../components';
 
 const Main = (props) => {
   return (
