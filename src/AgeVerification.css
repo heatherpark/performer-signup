@@ -31,6 +31,12 @@
   padding-left: 5%;
 }
 
+.form-field input:-webkit-autofill,
+.form-field input:-webkit-autofill:hover, 
+.form-field input:-webkit-autofill:focus
+.form-field select:-webkit-autofill,
+.form-field select:-webkit-autofill:hover,
+.form-field select:-webkit-autofill:focus,
 .form-field input {
   border: none;
   border-bottom: var(--font-color) solid 1.5px;;
@@ -41,6 +47,10 @@
   margin-top: 4%;
   padding: 3% 0;
   color: var(--font-color);
+  -webkit-text-fill-color: var(--font-color);
+  -webkit-background: none;
+  -webkit-: var(--secondary-font);
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-field input:focus {
