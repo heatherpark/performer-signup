@@ -1,36 +1,55 @@
 .age-verification {
+  --transition-duration: 0.3s;
+}
+
+.age-verification {
   width: 38%;
   margin: 0 auto;
 }
 
+ h2 {
+  font-family: var(--primary-font);
+  font-size: 1.1rem;
+  font-weight: 500;
+ }
+
 .message {
-  border: solid 0.5px #FFF;
-  border-radius: 3.5px;
+  border: solid 0.5px var(--font-color);
+  border-radius: 7px;
   padding: 1.3em 1.25em;
 }
+
+/** form field
+ ---------------------------------------------------------*/
 
 .form-field {
   display: grid;
   grid-template-columns: 95% 5%;
 }
 
-.input-error-container {
+.input-field {
   padding-left: 5%;
 }
 
-.form-field input,
-.form-field input:focus {
+.form-field input {
   border: none;
-  border-bottom: #FFF solid 1.5px;;
+  border-bottom: var(--font-color) solid 1.5px;;
   background: none;
   outline: 0;
   width: 98%;
   display: block;
   margin-top: 4%;
-  font-size: var(--primary-font-global-size);
-  color: var(--font-color);
   padding: 3% 0;
+  color: var(--font-color);
 }
+
+.form-field input:focus {
+  outline: 0;
+}
+
+/**
+ * input placeholder styling
+ */
 
 .form-field input::placeholder {
   font-family: var(--secondary-font);
@@ -38,26 +57,40 @@
   font-weight: normal;
 }
 
-.error-text {
-  font-family: var(--secondary-font);  
-  font-size: 0.65rem;
-  padding-left: 4%;
-}
-
-.form-field--invalid input {
-  background-color: #ec3979;
-  border-radius: 4px 4px 0 0;
-  padding-left: 3.5%;
-}
+/**
+ * fades out placeholder on input focus
+ */
 
 [placeholder]:focus::-webkit-input-placeholder {
   transition: opacity 0.5s 0.5s ease; 
   opacity: 0;
 }
 
-.validation-icon-container {
+/** form validation
+ ---------------------------------------------------------*/
+
+ .form-field.invalid input {
+  background-color: #ec3979;
+  border-radius: 4px 4px 0 0;
+  padding-left: 4%;
+  transition: background-color var(--transition-duration);
+  transition: padding-left var(--transition-duration);
+}
+
+.validation-text {
+  color: var(--font-color);
+  font-family: var(--secondary-font);  
+  font-size: 0.65rem;
+  padding: 2% 0 0 4%;
+}
+
+.validation-icon {
   padding: 30px 0;
 }
+
+/**
+ * validation icons
+ */
 
 .fa-check-circle,
 .fa-times-circle {
@@ -66,17 +99,15 @@
   margin: 1% auto;
 }
 
-.form-field--invalid input {
-  background-color: #ec3979;
-  border-radius: 4px 4px 0 0;
-  padding-left: 1%;
-}
+/** image upload
+ ---------------------------------------------------------*/
 
 .image-upload {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 0 5%;
   margin-top: 10%;
+  font-size: 0.8rem;
 }
 
 .image-upload .image {
@@ -87,28 +118,30 @@
 
 .image-drop {
   text-align: center;
-  border: 1px solid #FFF;
+  border: 1px solid var(--font-color);
   border-radius: 7px;
   font-family: var(--secondary-font);
-  font-size: var(--primary-font-global-size);
   padding: 16% 16%;
   margin-top: 5%;
-  line-height: 1.1rem;
+  line-height: 1.4rem;
 }
 
-.agreement {
+/** terms and conditions checkbox
+ ---------------------------------------------------------*/
+
+.terms-conditions {
   text-align: center;
   font-family: var(--primary-font);
   margin: 15% 0;
   font-size: 0.9rem;
 }
 
-.agreement label {
+.terms-conditions label {
   margin-left: 10px;
 }
 
 input[type=checkbox] { 
-  display:none; 
+  display: none; 
 }
 
 input[type=checkbox] + label:before {
@@ -116,18 +149,17 @@ input[type=checkbox] + label:before {
   display: inline-block;
 }
 
-input[type=checkbox] + label:before { 
+input[type=checkbox] + label:before,
+input[type=checkbox]:checked + label:before { 
   content: "\f00c"; 
   background-color: var(--font-color);
   border-radius: 4px;
   margin-right: 10px;
-  padding: 0 5px;
+  padding: 3px 3px;
+  transition: color var(--transition-duration); 
 }
 
 input[type=checkbox]:checked + label:before { 
-  content: "\f00c"; 
   color: #ff3b81;
   text-align: center;
-  margin-right: 10px;
-  padding: 0 5px;
 }

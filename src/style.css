@@ -15,22 +15,13 @@
 :root {
   --primary-font: GTHaptik;
   --secondary-font: CartographMonoCF;
-  --primary-font-global-size: 0.75rem;
   --font-color: #FFF;
-}
-
-html {
-  letter-spacing: 0.05rem;
-  line-height: 1.45rem;
+  --background-color: #ff3b81;
 }
 
 body {
-  background-color: #ff3b81;
+  background-color: var(--background-color);
   color: #FFF;
-}
-
-h2 {
-  font-family: var(--primary-font);
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 100%;
+  letter-spacing: 0.01rem;
 }

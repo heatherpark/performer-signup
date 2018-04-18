@@ -8,45 +8,43 @@ class AgeVerification extends Component {
   renderCheckboxField(field) {
     const { input, meta: { touched, error } } = field;
     return (
-      <div className="agreement">
+      <div className="terms-conditions">
         <input 
           type="checkbox"
-          id="agreement__checkbox"
+          id="terms-conditions-checkbox"
           {...input} />
-        <label htmlFor="agreement__checkbox">{field.label}</label>
+        <label 
+          htmlFor="terms-conditions-checkbox">{field.label}</label>
       </div>
     )
   }
 
   renderField(field) {
     const { meta: { touched, error, valid } } = field;
-    const validClass = touched && valid ? 'form-field--valid' : '';
-    const errorClass = touched && error ? 'form-field--invalid' : '';
-    const className = `form-field ${errorClass} ${validClass}`;
+    const errorClass = touched && error ? 'invalid' : '';
+    const className = `form-field ${errorClass}`;
     
     return (
       <div className={className}>
-        <div className="input-error-container">
+        <div className="input-field">
           <input
             type={field.type}
             placeholder={field.placeholder}
             {...field.input} />
-          <div className="error-text">
+          <div className="validation-text">
             {touched ? error : ''}
           </div>
         </div>
-        <div className="validation-icon-container">
+        <div className="validation-icon">
           {touched ? validationIcon(valid) : null}
         </div>
       </div>
     );
 
     function validationIcon(valid) {
-      if (valid) {
-        return <i className="far fa-check-circle"></i>
-      }
-
-      return <i className="far fa-times-circle"></i>
+      return valid ? 
+        <i className="far fa-check-circle"></i> :
+        <i className="far fa-times-circle"></i>
     }
   }
 
