@@ -2,17 +2,17 @@ import React from 'react';
 import './SignupFooter.css';
 
 const SignupFooter = (props) => {
+  console.log(props);
   return (
     <div className="signup-footer">
-      <a href=""
-        className="backward">
+      <button className="backward">
         <i className="fas fa-angle-double-left"></i>
-      </a>
-      <a href="" 
+      </button>
+      <button
         className="forward"
-        disabled={props.canMoveForward}>
+        disabled={!props.stageComplete}>
         <i className="fas fa-angle-double-right"></i>
-      </a>
+      </button>
     </div>
   );
 };

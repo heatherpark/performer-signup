@@ -7,7 +7,7 @@ const Main = (props) => {
   return (
     <div>
       <AgeVerification />
-      <SignupFooter canMoveForward={props.valid} />
+      <SignupFooter stageComplete={props.valid} />
     </div>
   );
 };

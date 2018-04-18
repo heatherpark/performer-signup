@@ -51,6 +51,7 @@
   -webkit-background: none;
   -webkit-: var(--secondary-font);
   transition: background-color 5000s ease-in-out 0s;
+  font-size: 0.8rem;
 }
 
 .form-field input:focus {
@@ -82,7 +83,7 @@
  .form-field.invalid input {
   background-color: #ec3979;
   border-radius: 4px 4px 0 0;
-  padding-left: 4%;
+  /* padding-left: 4%; */
   transition: background-color var(--transition-duration);
   transition: padding-left var(--transition-duration);
 }

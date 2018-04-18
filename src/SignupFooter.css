@@ -23,3 +23,8 @@
   color: #ff3b81;
   margin-left: 20%;
 }
+
+.forward[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
