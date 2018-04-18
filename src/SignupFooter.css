@@ -1,0 +1,25 @@
+.signup-footer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.backward, .forward {
+  font-size: 2rem;
+  width: 25%;
+  text-align: center;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.backward {
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  margin-right: 20%;
+}
+
+.forward {
+  background-color: var(--font-color);
+  color: #ff3b81;
+  margin-left: 20%;
+}

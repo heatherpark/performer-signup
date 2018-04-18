@@ -1,10 +1,18 @@
 import React from 'react';
+import './SignupFooter.css';
 
 const SignupFooter = (props) => {
   return (
-    <div>
-      <button>back</button>
-      <button disabled={!props.canMoveForward}>forward</button>
+    <div className="signup-footer">
+      <a href=""
+        className="backward">
+        <i className="fas fa-angle-double-left"></i>
+      </a>
+      <a href="" 
+        className="forward"
+        disabled={props.canMoveForward}>
+        <i className="fas fa-angle-double-right"></i>
+      </a>
     </div>
   );
 };
