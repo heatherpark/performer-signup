@@ -1,9 +1,19 @@
 import React from 'react';
-import './Header.css';
+import { ProgressIndicator } from '../components';
+import { NavMenu } from '../components';
 
 const Header = (props) => {
-  return (
+  const styles = {
+    margin: '2% 2% 6%',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr'
+  };
 
+  return (
+    <div style={styles}>
+      <ProgressIndicator />
+      <NavMenu />
+    </div>
   );
 };
 
