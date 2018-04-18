@@ -6,11 +6,10 @@ import { required, alphanumeric, minLength, emailMatch, age } from './forms/vali
 
 class AgeVerification extends Component {
   renderCheckboxField(field) {
-    console.log(field);
     return (
-      <div className="agreement__checkbox">
-        <input type="checkbox" />
-        <label>{field.label}</label>
+      <div className="agreement">
+        <input type="checkbox" id="agreement__checkbox" />
+        <label htmlFor="agreement__checkbox">{field.label}</label>
       </div>
     )
   }

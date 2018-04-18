@@ -9,7 +9,7 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 
 const store = createStore(reducers);
-
+window.store = store;
 ReactDOM.render(
   <Provider store={store}>
     <App />
