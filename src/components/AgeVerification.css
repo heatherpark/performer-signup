@@ -161,7 +161,7 @@ input[type=checkbox] + label:before {
 }
 
 input[type=checkbox] + label:before,
-input[type=checkbox]:checked + label:before { 
+input[type=checkbox] + label:before { 
   content: "\f00c"; 
   background-color: var(--font-color);
   border-radius: 4px;
